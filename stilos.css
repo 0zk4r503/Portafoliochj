@@ -11,9 +11,9 @@
 
 :root{
     --bg-color: #000000;
-    --second-color: #452225;
+    --second-color: #093c0b;
     --text-color: #fff;
-    --main-color: #ff4d4d;
+    --main-color: #3c771a;
 }
 
 html{
@@ -22,6 +22,9 @@ html{
 }
 
 .header{
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(243, 2443, 243, 0,2);
     position: fixed;
     top: 0;
     left: 0;
@@ -89,7 +92,7 @@ section{
     font-size: 3.2rem;
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: .7px var(--main-color);
+    -webkit-text-stroke: 2px var(--main-color);
 }
 
 .home-content p{
@@ -200,4 +203,90 @@ section{
 
 .home-sci a:hover::before{
     width: 100%;
+}
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: transparent;
+    transition: .5s;
+}
+
+.home-imgHover:hover{
+    background: var(--second-color);
+    opacity: .9;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--second-bg-color);
+    padding-bottom: 1rem;
+}
+
+.heading{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+ span{
+    color: var(--main-color);
+ }
+
+.about-img{
+    position: relative;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img{
+    width: 80%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+}
+
+.about-img .circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--bg-color);
+    border-bottom: .2rem solid var(--bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+
+.about-content{
+    text-align: center;
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+}
+
+.about-content p{
+    font-size: 1.5rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn-box.btns{
+    display: inline-block;
+    width: 15rem;
+}
+
+.btn-box.btns a::before{
+    background: var(--bg-color);
 }
